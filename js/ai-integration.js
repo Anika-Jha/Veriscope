@@ -14,9 +14,8 @@ class AIIntegration {
     }
     
     getApiKey() {
-        // Try to get from environment variables or use fallback
-        return process?.env?.HUGGING_FACE_API_KEY || 
-               window?.HUGGING_FACE_API_KEY || 
+        // Try to get from window object or use fallback
+        return window?.HUGGING_FACE_API_KEY || 
                'hf_default_fallback_key';
     }
     
