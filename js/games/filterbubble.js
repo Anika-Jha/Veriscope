@@ -103,12 +103,17 @@ class FilterBubbleGame {
     }
     
     launchNextBubble() {
+        console.log('launchNextBubble called - currentRound:', this.currentRound, 'totalRounds:', this.totalRounds);
+        console.log('Info bubbles array:', this.infoBubbles);
+        
         if (this.currentRound >= this.totalRounds) {
+            console.log('Ending game - reached max rounds');
             this.showFinalResults();
             return;
         }
         
         const infoBubble = this.infoBubbles[this.currentRound];
+        console.log('Current info bubble:', infoBubble);
         if (!infoBubble) {
             console.error('No info bubble found at index', this.currentRound, 'Total bubbles:', this.infoBubbles.length);
             this.showFinalResults();

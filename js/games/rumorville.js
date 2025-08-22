@@ -56,12 +56,17 @@ class RumorVilleGame {
     }
     
     showNextRumor() {
+        console.log('showNextRumor called - currentIndex:', this.currentRumorIndex, 'totalRumors:', this.totalRumors);
+        console.log('Rumors array:', this.rumors);
+        
         if (this.currentRumorIndex >= this.totalRumors) {
+            console.log('Ending game - reached max rumors');
             this.showFinalResults();
             return;
         }
         
         const rumor = this.rumors[this.currentRumorIndex];
+        console.log('Current rumor:', rumor);
         if (!rumor) {
             console.error('No rumor found at index', this.currentRumorIndex, 'Total rumors:', this.rumors.length);
             this.showFinalResults();
