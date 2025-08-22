@@ -5,17 +5,21 @@ class RumorVilleGame {
         this.score = 0;
         this.totalRumors = 0;
         this.gameContainer = document.getElementById('rumorville-content');
-        this.rumors = FALLBACK_STORIES.rumorville;
+        this.rumors = [];
         this.aiIntegration = new AIIntegration();
     }
     
     start() {
         this.currentRumorIndex = 0;
         this.score = 0;
-        this.totalRumors = Math.min(5, this.rumors.length); // Play 5 rounds
-        this.showIntroduction();
         
-        console.log('RumorVille game started');
+        // Ensure we have access to fallback stories
+        this.rumors = window.FALLBACK_STORIES?.rumorville || [];
+        this.totalRumors = Math.min(5, this.rumors.length); // Play 5 rounds
+        
+        console.log('RumorVille game started with', this.totalRumors, 'rumors');
+        
+        this.showIntroduction();
         
         // Play start sound
         window.playSound('pop');

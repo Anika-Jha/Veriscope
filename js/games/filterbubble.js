@@ -7,7 +7,7 @@ class FilterBubbleGame {
         this.acceptedCount = 0;
         this.rejectedCount = 0;
         this.gameContainer = document.getElementById('filterbubble-content');
-        this.infoBubbles = FALLBACK_STORIES.filterbubble;
+        this.infoBubbles = [];
         this.aiIntegration = new AIIntegration();
         this.driftingBubbles = [];
     }
@@ -18,9 +18,14 @@ class FilterBubbleGame {
         this.acceptedCount = 0;
         this.rejectedCount = 0;
         this.driftingBubbles = [];
-        this.showIntroduction();
         
-        console.log('Filter Bubble Simulator started');
+        // Ensure we have access to fallback stories
+        this.infoBubbles = window.FALLBACK_STORIES?.filterbubble || [];
+        this.totalRounds = Math.min(6, this.infoBubbles.length);
+        
+        console.log('Filter Bubble Simulator started with', this.totalRounds, 'bubbles');
+        
+        this.showIntroduction();
         
         // Play ambient start sound
         window.playSound('chime');
@@ -113,9 +118,9 @@ class FilterBubbleGame {
         floatingBubble.textContent = infoBubble.text;
         floatingBubble.style.display = 'flex';
         
-        // Animate bubble floating across
+        // Animate bubble floating across (slowed down for better readability)
         setTimeout(() => {
-            floatingBubble.style.transition = 'left 4s linear';
+            floatingBubble.style.transition = 'left 8s linear';
             floatingBubble.style.left = 'calc(50% - 75px)'; // Stop near center
         }, 100);
         
@@ -124,13 +129,13 @@ class FilterBubbleGame {
             floatingBubble.style.transition = 'none';
             actions.style.display = 'flex';
             
-            // Auto-continue if no choice made within 10 seconds
+            // Auto-continue if no choice made within 15 seconds
             setTimeout(() => {
                 if (actions.style.display === 'flex') {
                     this.handleChoice('ignore');
                 }
-            }, 10000);
-        }, 2100);
+            }, 15000);
+        }, 4100);
         
         // Play bubble sound
         window.playSound('chime');

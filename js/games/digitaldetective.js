@@ -5,17 +5,21 @@ class DigitalDetectiveGame {
         this.correctChoices = 0;
         this.totalCases = 0;
         this.gameContainer = document.getElementById('detective-content');
-        this.evidence = FALLBACK_STORIES.digitaldetective;
+        this.evidence = [];
         this.aiIntegration = new AIIntegration();
     }
     
     start() {
         this.currentCaseIndex = 0;
         this.correctChoices = 0;
-        this.totalCases = Math.min(6, this.evidence.length); // Investigate 6 pieces of evidence
-        this.showIntroduction();
         
-        console.log('Digital Detective game started');
+        // Ensure we have access to fallback stories
+        this.evidence = window.FALLBACK_STORIES?.digitaldetective || [];
+        this.totalCases = Math.min(6, this.evidence.length); // Investigate 6 pieces of evidence
+        
+        console.log('Digital Detective game started with', this.totalCases, 'cases');
+        
+        this.showIntroduction();
         
         // Play detective sound
         window.playSound('typewriter');

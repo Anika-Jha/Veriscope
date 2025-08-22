@@ -6,7 +6,7 @@ class EchoChamberGame {
         this.correctChoices = 0;
         this.totalPosts = 0;
         this.gameContainer = document.getElementById('echochamber-content');
-        this.chatPosts = FALLBACK_STORIES.echochamber;
+        this.chatPosts = [];
         this.aiIntegration = new AIIntegration();
         this.chatHistory = [];
     }
@@ -15,11 +15,15 @@ class EchoChamberGame {
         this.currentPostIndex = 0;
         this.echoScore = 0;
         this.correctChoices = 0;
-        this.totalPosts = Math.min(7, this.chatPosts.length); // Analyze 7 chat posts
         this.chatHistory = [];
-        this.showIntroduction();
         
-        console.log('Echo Chamber Escape game started');
+        // Ensure we have access to fallback stories
+        this.chatPosts = window.FALLBACK_STORIES?.echochamber || [];
+        this.totalPosts = Math.min(7, this.chatPosts.length); // Analyze 7 chat posts
+        
+        console.log('Echo Chamber Escape game started with', this.totalPosts, 'posts');
+        
+        this.showIntroduction();
         
         // Play techno start sound
         window.playSound('ping');
@@ -391,6 +395,30 @@ class EchoChamberGame {
                         <span style="color: #ee5a6f; margin-right: 0.5rem;">🌉</span>
                         <div>
                             <strong>Bridge Building:</strong> Promote understanding by asking clarifying questions rather than attacking positions.
+                        </div>
+                    </li>
+                    <li style="margin: 0.8rem 0; display: flex; align-items: flex-start;">
+                        <span style="color: #ee5a6f; margin-right: 0.5rem;">🧠</span>
+                        <div>
+                            <strong>Critical Thinking:</strong> Pause before reacting emotionally. Consider: "What evidence supports this claim?"
+                        </div>
+                    </li>
+                    <li style="margin: 0.8rem 0; display: flex; align-items: flex-start;">
+                        <span style="color: #ee5a6f; margin-right: 0.5rem;">🎯</span>
+                        <div>
+                            <strong>Avoid Echo Chambers:</strong> Actively seek out diverse perspectives, even if they challenge your views.
+                        </div>
+                    </li>
+                    <li style="margin: 0.8rem 0; display: flex; align-items: flex-start;">
+                        <span style="color: #ee5a6f; margin-right: 0.5rem;">⚖️</span>
+                        <div>
+                            <strong>Fact vs Opinion:</strong> Learn to distinguish between factual claims and personal opinions in discussions.
+                        </div>
+                    </li>
+                    <li style="margin: 0.8rem 0; display: flex; align-items: flex-start;">
+                        <span style="color: #ee5a6f; margin-right: 0.5rem;">🤝</span>
+                        <div>
+                            <strong>Respectful Disagreement:</strong> You can challenge ideas without attacking the person expressing them.
                         </div>
                     </li>
                 </ul>
