@@ -1,0 +1,60 @@
+# Veriscope Audio Assets - Sound Effects
+
+This directory contains placeholder references for sound effect files.
+In a production environment, these would be replaced with actual royalty-free audio files.
+
+## Required Sound Effects:
+
+### General UI Sounds
+- pop.mp3 - Bubble pop sound for RumorVille interactions
+- whoosh.mp3 - Swoosh sound for transitions and movement
+- chime.mp3 - Pleasant notification chime for positive feedback
+- thud.mp3 - Soft impact sound for negative feedback
+- click.mp3 - Button click confirmation sound
+- ping.mp3 - Alert notification for Echo Chamber
+- unlock.mp3 - Success sound for correct choices
+- success.mp3 - Victory sound for game completion
+- error.mp3 - Error sound for incorrect choices
+- completion.mp3 - Special fanfare for completing all games
+
+### Game-Specific Effects
+- typewriter.mp3 - Typewriter sound for Digital Detective
+- investigation.mp3 - Detective investigation sound
+- bubble-float.mp3 - Floating bubble sound for Filter Bubble
+- echo-chamber.mp3 - Echo effect for Echo Chamber game
+- rumor-spread.mp3 - Spreading sound for RumorVille
+
+## Audio Specifications:
+- Format: MP3 or OGG Vorbis
+- Quality: 44.1 kHz, 16-bit minimum
+- Duration: 0.1 - 2.0 seconds (short, punchy effects)
+- Volume: Normalized to prevent clipping
+- No silence padding at beginning/end
+
+## Suggested Sources for Royalty-Free SFX:
+- Freesound.org (Creative Commons licensed)
+- Pixabay Sounds (free for commercial use)
+- Zapsplat (requires free account)
+- Adobe Audio (with subscription)
+- YouTube Audio Library (free)
+
+## Implementation Notes:
+- Sound effects should be subtle and not overpowering
+- All effects should complement the game's educational focus
+- Consider providing volume controls for accessibility
+- Ensure effects work across different browsers and devices
+- Test effects with screen readers for accessibility compliance
+
+## Current Fallback:
+The AudioManager class uses Web Audio API to generate synthetic sound effects when audio files are unavailable. This includes:
+- Oscillator-based tones for different effect types
+- Programmatically generated chords and melodies
+- Frequency modulation for various sound characteristics
+
+## Accessibility Considerations:
+- Provide visual alternatives for audio cues
+- Allow users to disable sound effects completely
+- Ensure sound effects don't interfere with screen readers
+- Consider users with hearing impairments in UI design
+
+## File Organization:

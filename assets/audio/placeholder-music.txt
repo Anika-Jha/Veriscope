@@ -1,0 +1,49 @@
+# Veriscope Audio Assets - Background Music
+
+This directory contains placeholder references for background music files.
+In a production environment, these would be replaced with actual royalty-free audio files.
+
+## Required Background Music Tracks:
+
+### RumorVille Theme - Upbeat Cartoonish
+- File: rumorville-theme.mp3
+- Style: Quirky, upbeat melody with playful instruments
+- Duration: 2-3 minutes (looping)
+- Mood: Lighthearted, engaging, small-town feel
+- Suggested sources: Pixabay Music, Freesound.org
+
+### Filter Bubble Simulator Theme - Ambient Surreal  
+- File: filterbubble-theme.mp3
+- Style: Lo-fi ambient with dreamy, floating qualities
+- Duration: 3-4 minutes (looping)
+- Mood: Contemplative, ethereal, thought-provoking
+- Suggested sources: Zapsplat, Adobe Audio
+
+### Digital Detective Theme - Noir Jazz
+- File: detective-theme.mp3
+- Style: Jazz noir with saxophone, piano, and subtle percussion
+- Duration: 2-3 minutes (looping)
+- Mood: Mysterious, sophisticated, investigative
+- Suggested sources: Free Music Archive, Incompetech
+
+### Echo Chamber Escape Theme - Tense Techno
+- File: echochamber-theme.mp3
+- Style: Subtle electronic beats with building tension
+- Duration: 2-3 minutes (looping)
+- Mood: Modern, slightly anxious, digital atmosphere
+- Suggested sources: Pixabay Music, Freesound.org
+
+## Usage Notes:
+- All music should be royalty-free with appropriate licenses
+- Audio files should be optimized for web (128kbps MP3 or OGG)
+- Tracks should loop seamlessly without noticeable breaks
+- Volume levels should be consistent across all tracks
+- Consider providing both MP3 and OGG formats for browser compatibility
+
+## Current Implementation:
+The AudioManager class generates synthetic background music using Web Audio API as a fallback when audio files are not available. This ensures the application functions properly even without external audio assets.
+
+## Legal Requirements:
+- Ensure all audio has proper licensing for commercial use
+- Maintain attribution files for Creative Commons licensed content
+- Keep documentation of license terms for each audio file

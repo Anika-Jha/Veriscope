@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veriscope - Media Literacy Games</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/games.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landing-page" class="screen active">
+        <div class="landing-container">
+            <div class="logo-section">
+                <i class="fas fa-search-plus logo-icon"></i>
+                <h1 class="logo-title">Veriscope</h1>
+                <p class="logo-subtitle">Master Media Literacy Through Interactive Games</p>
+            </div>
+            <button id="start-button" class="start-btn">
+                <i class="fas fa-play"></i>
+                Start Veriscope
+            </button>
+            <div class="landing-features">
+                <div class="feature">
+                    <i class="fas fa-bullseye"></i>
+                    <span>Learn to spot misinformation</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-brain"></i>
+                    <span>Develop critical thinking</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Build digital resilience</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Hub -->
+    <div id="game-hub" class="screen">
+        <div class="hub-container">
+            <div class="hub-header">
+                <h2><i class="fas fa-gamepad"></i> Choose Your Challenge</h2>
+                <div class="progress-display">
+                    <span id="games-completed">0</span>/4 Games Completed
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="games-grid">
+                <div class="game-card" id="rumorville-card" data-game="rumorville">
+                    <div class="game-icon rumorville-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>RumorVille</h3>
+                    <p>Navigate a town full of rumors and learn to verify information</p>
+                    <div class="game-status" id="rumorville-status">
+                        <i class="fas fa-play-circle"></i> Start Game
+                    </div>
+                </div>
+                
+                <div class="game-card" id="filterbubble-card" data-game="filterbubble">
+                    <div class="game-icon filterbubble-icon">
+                        <i class="fas fa-bubble"></i>
+                    </div>
+                    <h3>Filter Bubble Simulator</h3>
+                    <p>Explore how information bubbles shape our worldview</p>
+                    <div class="game-status" id="filterbubble-status">
+                        <i class="fas fa-play-circle"></i> Start Game
+                    </div>
+                </div>
+                
+                <div class="game-card" id="detective-card" data-game="digitaldetective">
+                    <div class="game-icon detective-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Digital Detective</h3>
+                    <p>Investigate evidence and assess source credibility</p>
+                    <div class="game-status" id="detective-status">
+                        <i class="fas fa-play-circle"></i> Start Game
+                    </div>
+                </div>
+                
+                <div class="game-card" id="echochamber-card" data-game="echochamber">
+                    <div class="game-icon echochamber-icon">
+                        <i class="fas fa-comments-dollar"></i>
+                    </div>
+                    <h3>Echo Chamber Escape</h3>
+                    <p>Break free from biased discussions and find balance</p>
+                    <div class="game-status" id="echochamber-status">
+                        <i class="fas fa-play-circle"></i> Start Game
+                    </div>
+                </div>
+            </div>
+            
+            <div class="final-summary" id="final-summary" style="display: none;">
+                <div class="celebration">
+                    <i class="fas fa-trophy"></i>
+                    <h2>Congratulations!</h2>
+                    <p>You've completed all 4 Veriscope challenges and mastered essential media literacy skills!</p>
+                    <button id="restart-journey" class="restart-btn">Start New Journey</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Game Screens -->
+    <div id="rumorville-game" class="screen game-screen rumorville-theme">
+        <div class="game-container">
+            <div class="game-header">
+                <button class="back-btn" data-target="game-hub"><i class="fas fa-arrow-left"></i></button>
+                <h2><i class="fas fa-comments"></i> RumorVille</h2>
+                <div class="audio-controls">
+                    <button id="rumorville-music-toggle" class="audio-toggle"><i class="fas fa-music"></i></button>
+                    <button id="rumorville-sfx-toggle" class="audio-toggle"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+            <div id="rumorville-content" class="game-content"></div>
+        </div>
+    </div>
+
+    <div id="filterbubble-game" class="screen game-screen filterbubble-theme">
+        <div class="game-container">
+            <div class="game-header">
+                <button class="back-btn" data-target="game-hub"><i class="fas fa-arrow-left"></i></button>
+                <h2><i class="fas fa-bubble"></i> Filter Bubble Simulator</h2>
+                <div class="audio-controls">
+                    <button id="filterbubble-music-toggle" class="audio-toggle"><i class="fas fa-music"></i></button>
+                    <button id="filterbubble-sfx-toggle" class="audio-toggle"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+            <div id="filterbubble-content" class="game-content"></div>
+        </div>
+    </div>
+
+    <div id="digitaldetective-game" class="screen game-screen detective-theme">
+        <div class="game-container">
+            <div class="game-header">
+                <button class="back-btn" data-target="game-hub"><i class="fas fa-arrow-left"></i></button>
+                <h2><i class="fas fa-search"></i> Digital Detective</h2>
+                <div class="audio-controls">
+                    <button id="detective-music-toggle" class="audio-toggle"><i class="fas fa-music"></i></button>
+                    <button id="detective-sfx-toggle" class="audio-toggle"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+            <div id="detective-content" class="game-content"></div>
+        </div>
+    </div>
+
+    <div id="echochamber-game" class="screen game-screen echochamber-theme">
+        <div class="game-container">
+            <div class="game-header">
+                <button class="back-btn" data-target="game-hub"><i class="fas fa-arrow-left"></i></button>
+                <h2><i class="fas fa-comments-dollar"></i> Echo Chamber Escape</h2>
+                <div class="audio-controls">
+                    <button id="echochamber-music-toggle" class="audio-toggle"><i class="fas fa-music"></i></button>
+                    <button id="echochamber-sfx-toggle" class="audio-toggle"><i class="fas fa-volume-up"></i></button>
+                </div>
+            </div>
+            <div id="echochamber-content" class="game-content"></div>
+        </div>
+    </div>
+
+    <!-- Flashcard Modal -->
+    <div id="flashcard-modal" class="modal">
+        <div class="modal-content">
+            <div class="flashcard">
+                <div class="flashcard-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Key Learning</h3>
+                </div>
+                <div class="flashcard-body">
+                    <div id="flashcard-content"></div>
+                </div>
+                <div class="flashcard-footer">
+                    <button id="continue-btn" class="continue-btn">Continue Journey</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+    <script src="data/fallback-stories.js"></script>
+    <script src="js/audio-manager.js"></script>
+    <script src="js/progress-tracker.js"></script>
+    <script src="js/ai-integration.js"></script>
+    <script src="js/games/rumorville.js"></script>
+    <script src="js/games/filterbubble.js"></script>
+    <script src="js/games/digitaldetective.js"></script>
+    <script src="js/games/echochamber.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
