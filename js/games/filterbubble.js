@@ -24,6 +24,7 @@ class FilterBubbleGame {
         this.totalRounds = Math.min(6, this.infoBubbles.length);
         
         console.log('Filter Bubble Simulator started with', this.totalRounds, 'bubbles');
+        console.log('First bubble sample:', this.infoBubbles[0]);
         
         this.showIntroduction();
         
@@ -108,6 +109,12 @@ class FilterBubbleGame {
         }
         
         const infoBubble = this.infoBubbles[this.currentRound];
+        if (!infoBubble) {
+            console.error('No info bubble found at index', this.currentRound, 'Total bubbles:', this.infoBubbles.length);
+            this.showFinalResults();
+            return;
+        }
+        
         const floatingBubble = document.getElementById('floating-info-bubble');
         const actions = document.getElementById('bubble-actions');
         

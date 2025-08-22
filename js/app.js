@@ -279,3 +279,7 @@ window.completeGame = (gameId, learningContent) => {
         window.veriscopeApp.onGameComplete(gameId, learningContent);
     }
 };
+
+// Make utility functions globally available
+window.showGameResult = showGameResult;
+window.showLoading = showLoading;

@@ -22,6 +22,7 @@ class EchoChamberGame {
         this.totalPosts = Math.min(7, this.chatPosts.length); // Analyze 7 chat posts
         
         console.log('Echo Chamber Escape game started with', this.totalPosts, 'posts');
+        console.log('First post sample:', this.chatPosts[0]);
         
         this.showIntroduction();
         
@@ -126,6 +127,12 @@ class EchoChamberGame {
         }
         
         const post = this.chatPosts[this.currentPostIndex];
+        if (!post) {
+            console.error('No post found at index', this.currentPostIndex, 'Total posts:', this.chatPosts.length);
+            this.showFinalResults();
+            return;
+        }
+        
         const currentPostEl = document.getElementById('current-post');
         
         if (currentPostEl) {

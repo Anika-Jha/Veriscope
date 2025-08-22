@@ -18,6 +18,7 @@ class RumorVilleGame {
         this.totalRumors = Math.min(5, this.rumors.length); // Play 5 rounds
         
         console.log('RumorVille game started with', this.totalRumors, 'rumors');
+        console.log('First rumor sample:', this.rumors[0]);
         
         this.showIntroduction();
         
@@ -61,6 +62,11 @@ class RumorVilleGame {
         }
         
         const rumor = this.rumors[this.currentRumorIndex];
+        if (!rumor) {
+            console.error('No rumor found at index', this.currentRumorIndex, 'Total rumors:', this.rumors.length);
+            this.showFinalResults();
+            return;
+        }
         
         const rumorHtml = `
             <div class="rumor-container">

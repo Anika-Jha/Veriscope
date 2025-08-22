@@ -18,6 +18,7 @@ class DigitalDetectiveGame {
         this.totalCases = Math.min(6, this.evidence.length); // Investigate 6 pieces of evidence
         
         console.log('Digital Detective game started with', this.totalCases, 'cases');
+        console.log('First case sample:', this.evidence[0]);
         
         this.showIntroduction();
         
@@ -68,6 +69,11 @@ class DigitalDetectiveGame {
         }
         
         const evidenceItem = this.evidence[this.currentCaseIndex];
+        if (!evidenceItem) {
+            console.error('No evidence found at index', this.currentCaseIndex, 'Total cases:', this.evidence.length);
+            this.showFinalResults();
+            return;
+        }
         
         const evidenceHtml = `
             <div class="detective-case">
