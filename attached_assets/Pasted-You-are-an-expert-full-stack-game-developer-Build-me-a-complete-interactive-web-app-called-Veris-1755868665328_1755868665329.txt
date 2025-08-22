@@ -1,0 +1,105 @@
+You are an expert full-stack game developer. Build me a complete interactive **web app called "Veriscope"** with **4 mini-games** inside one app. Each mini-game has its own unique vibe, UI, background music, sound effects, and learning goal. The game must be fully functional — do not use placeholders or TODOs. All fallback stories, dialogues, music, and sound effects must be included directly in the code and assets. The final project should run in the browser, be responsive on desktop and mobile, and portable for deployment on Render.
+
+📌 Core Features:
+- Landing page → "Start Veriscope" button → leads to game hub.
+- Game hub with 4 clickable mini-games.
+- Each mini-game uses AI-based judgment of user choices:
+   - Use Hugging Face free models (sentiment, credibility, fake news detection).
+   - Or ml5.js / TensorFlow.js for local AI.
+   - If AI fails → use **pre-written fallback stories** (10+ per mini-game).
+   - All fallback stories must be coded into the project now, no placeholders.
+- Each mini-game ends with a "Flashcard of Learnings".
+- Track progress across all 4 games → show final celebratory summary when complete.
+- Background music & SFX per mini-game, toggleable in corner.
+- Store all audio locally from royalty-free sources (e.g., FreeSound, Pixabay Music).
+
+---
+
+🎮 Mini-Game 1: RumorVille
+- Cartoonish bright town UI.
+- Rumor bubbles float with text.
+- Player chooses [Share] [Verify] [Ignore].
+- AI/fallback decides rumor truth.
+- Fallback stories (examples that must be hardcoded):
+   - “Aliens spotted in Town Square!” → False
+   - “Mayor announces free health clinic” → True
+   - “Chocolate cures all diseases” → False
+   - “Local school hosts science fair” → True
+   - “Government hides dragon sightings” → False
+   - “Farmers’ market opens Sunday” → True
+   - “Click here for miracle diet” → False
+   - “Town library adds new books” → True
+   - “New virus spreading via Wi-Fi” → False
+   - “High school robotics team wins award” → True
+- Music: Quirky upbeat track. SFX: “pop”, “whoosh”.
+
+🎮 Mini-Game 2: Filter Bubble Simulator
+- Abstract surreal UI with drifting bubbles.
+- Player bubble in center, others float in.
+- Player chooses [Accept] or [Reject].
+- AI/fallback judges sentiment.
+- Fallback info snippets:
+   - “Local farmer markets are closing” (Negative)
+   - “Community builds new playground” (Positive)
+   - “Big corporations are thriving” (Neutral)
+   - “Unemployment reaches record low” (Positive)
+   - “Severe drought reported in nearby towns” (Negative)
+   - “Art festival attracts thousands” (Positive)
+   - “Government passes strict new tax law” (Negative)
+   - “Tech startup creates thousands of jobs” (Positive)
+   - “Housing prices skyrocket” (Negative)
+   - “City expands public transportation” (Positive)
+- Diversity Meter shrinks with rejection.
+- Music: Lo-fi ambient. SFX: “chime”, “thud”.
+
+🎮 Mini-Game 3: Digital Detective
+- Noir-style grayscale background.
+- Evidence cards shown (articles, posts, headlines).
+- Player chooses [Trust] [Investigate] [Dismiss].
+- AI/fallback judges credibility.
+- Fallback evidence examples:
+   - “Breaking: Miracle cure discovered!” → Not credible
+   - “WHO report confirms outbreak” → Credible
+   - “Celebrity endorses unproven drug” → Not credible
+   - “NASA announces Mars rover findings” → Credible
+   - “You won’t believe this shocking news!” → Not credible
+   - “Local university study published in journal” → Credible
+   - “Chain message claims free gift cards” → Not credible
+   - “Government health advisory released” → Credible
+   - “Blog says vaccines cause mind control” → Not credible
+   - “Peer-reviewed climate change report” → Credible
+- Music: Jazz noir. SFX: “typewriter”, “click”.
+
+🎮 Mini-Game 4: Echo Chamber Escape
+- Chatroom simulation with scrolling posts.
+- NPCs post biased statements.
+- Player chooses [Support] [Question] [Ignore].
+- AI/fallback judges bias.
+- Fallback posts:
+   - “Everyone who disagrees is ignorant!” → Highly biased
+   - “Maybe we should hear both sides” → Balanced
+   - “This group is always right, others lie” → Biased
+   - “Scientific studies suggest mixed outcomes” → Balanced
+   - “If you don’t agree, you’re brainwashed” → Biased
+   - “It’s complicated, multiple perspectives matter” → Balanced
+   - “Only fools would think otherwise” → Biased
+   - “Experts across fields are debating this” → Balanced
+   - “Our side is perfect, theirs is evil” → Biased
+   - “Nuance is important here” → Balanced
+- Echo Meter fills with bias, shrinks if questioned.
+- Music: Tense techno. SFX: “ping”, “unlock”.
+
+---
+
+📌 Technical Requirements:
+- Use vanilla JS, CSS animations, HTML5.
+- Include real fallback stories (already listed above), not placeholders.
+- Store royalty-free tracks & sound effects locally in /assets.
+- Include responsive design for mobile & desktop.
+- Comment code clearly, especially AI vs. fallback logic.
+- Do not leave anything incomplete.
+
+⚠️ Constraints:
+- No paid APIs or premium assets.
+- Must run fully inside Replit for dev.
+- Must be easily deployed on Render later.
