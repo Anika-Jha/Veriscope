@@ -88,32 +88,39 @@ class AIIntegration {
     }
     
     // Analyze fake news for RumorVille game
-    async analyzeFakeNews(text) {
-        try {
-            // Use toxicity detection as a proxy for suspicious content
-            const result = await this.makeHuggingFaceRequest(this.models.fakeNews, text);
-            
-            if (result && result.length > 0) {
-                const prediction = result[0];
-                const toxicScore = prediction.score;
-                
-                // Heuristic: highly toxic content is more likely to be misinformation
-                const suspicionLevel = toxicScore;
-                const isCredible = suspicionLevel < 0.3;
-                
-                return {
-                    isCredible: isCredible,
-                    confidence: Math.abs(1 - suspicionLevel),
-                    reasoning: `AI analysis ${isCredible ? 'found no major red flags' : 'detected suspicious patterns'} in this content.`
-                };
-            }
-            
-            throw new Error('Invalid AI response');
-        } catch (error) {
-            console.log('AI fake news analysis failed, will use fallback');
-            throw error;
+    // Analyze fake news for RumorVille game
+async analyzeFakeNews(text) {
+    try {
+        const result = await this.makeHuggingFaceRequest(this.models.fakeNews, text);
+
+        if (result && Array.isArray(result) && result.length > 0) {
+            // HuggingFace classification usually returns nested arrays
+            const predictions = Array.isArray(result[0]) ? result[0] : result;
+            const topPrediction = predictions[0]; // highest confidence
+
+            const toxicScore = topPrediction.score;
+            const isCredible = toxicScore < 0.3;
+
+            return {
+                isCredible: isCredible,
+                confidence: Math.abs(1 - toxicScore),
+                reasoning: `AI analysis ${isCredible ? 'found no major red flags' : 'detected suspicious patterns'} in this content.`
+            };
         }
+
+        throw new Error('Invalid AI response');
+    } catch (error) {
+        console.log('AI fake news analysis failed, using fallback');
+
+        // Always return structured fallback result instead of throwing
+        return {
+            isCredible: false,
+            confidence: 0.5,
+            reasoning: "AI unavailable – defaulting to caution."
+        };
     }
+}
+
     
     // Analyze credibility for Digital Detective game
     async analyzeCredibility(text) {

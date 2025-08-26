@@ -1,6 +1,8 @@
 /* Game-Specific Themes */
 
 /* RumorVille Theme - Cartoonish bright town */
+
+
 .rumorville-theme {
     background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #74b9ff 100%);
     position: relative;
