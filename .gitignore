@@ -6,3 +6,7 @@
 *.tar
 *.gz
 *.rar
+# Other binaries or large files
+*.zip
+*.tar.gz
+*.rar
