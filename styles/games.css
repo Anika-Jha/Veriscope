@@ -112,7 +112,7 @@
     border-radius: 25px;
     margin: 2rem 0;
     position: relative;
-    animation: bubbleFloat 3s ease-in-out infinite;
+    animation: bubbleFloat 20s ease-in-out infinite;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
@@ -203,20 +203,22 @@
 
 .info-bubble {
     position: absolute;
-    width: 150px;
-    height: 60px;
+    width: 250px;        /* Increased from 150px */
+    height: 100px;       /* Increased from 60px */
     background: rgba(255,255,255,0.9);
-    border-radius: 30px;
+    border-radius: 50px; /* Increased from 30px to maintain proportions */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9rem;
+    font-size: 1.0rem;   /* Increased from 0.9rem */
     text-align: center;
-    padding: 0.5rem;
+    padding: 0.5 rem;      
     cursor: pointer;
     transition: all 0.3s ease;
-    animation: drift 8s infinite linear;
+    animation: drift 15s infinite linear; /* Increased from 8s */
 }
+
+
 
 .info-bubble:hover {
     transform: scale(1.05);
@@ -224,9 +226,10 @@
 }
 
 @keyframes drift {
-    0% { transform: translateX(-200px); }
-    100% { transform: translateX(calc(100vw + 200px)); }
+    0% { transform: translateX(-300px); } /* Increased from -200px to account for larger bubble */
+    100% { transform: translateX(calc(100vw + 300px)); } /* Increased from 200px */
 }
+
 
 .bubble-actions {
     display: flex;
