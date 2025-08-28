@@ -4,22 +4,36 @@
 
 
 .rumorville-theme {
-    background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 50%, #74b9ff 100%);
-    position: relative;
+    background-image: 
+        linear-gradient(rgba(255, 234, 167, 0.5), rgba(250, 177, 160, 0.5)),
+        url('../assets/rv.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
+
 
 .rumorville-theme::before {
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.1) 0%, transparent 50%);
-    pointer-events: none;
+    background-image: url('../assets/rv.jpeg'); /* Background image */
+    background-size: cover; /* Ensure the image covers the entire area */
+    background-position: center; /* Keep the image centered */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    opacity: 1; /* Adjust the opacity to allow the gradient to show */
+    pointer-events: none; /* Ensure it doesn’t interfere with interactions */
+    z-index: -1; /* Place the image behind the content */
 }
+
+
+
+
+
 
 /* Filter Bubble Theme - Abstract surreal */
 .filterbubble-theme {
@@ -28,6 +42,55 @@
     overflow: hidden;
 }
 
+.filterbubble-theme .floating-bubble {
+    position: absolute;
+    width: 100px; /* Size of each bubble */
+    height: 100px;
+    background-image: url('../assets/bubble.jpeg'); /* Your bubble image */
+    background-size: contain; /* Ensures the image fits inside the div */
+    background-repeat: no-repeat;
+    animation: floatUp 6s ease-in-out infinite; /* Floating animation */
+    border-radius: 50%; /* Make bubbles circular */
+}
+
+#bubble1 {
+    bottom: 10%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+#bubble2 {
+    bottom: 30%;
+    left: 45%;
+    animation-delay: 1s;
+}
+
+#bubble3 {
+    bottom: 50%;
+    left: 70%;
+    animation-delay: 2s;
+}
+
+#bubble4 {
+    bottom: 40%;
+    left: 85%;
+    animation-delay: 3s;
+}
+
+/* Floating animation keyframes */
+@keyframes floatUp {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    50% {
+        transform: translateX(10px) translateY(-20px); /* Bubble floating up */
+    }
+    100% {
+        transform: translateX(0) translateY(0); /* Move back down */
+    }
+}
+
+/* Existing background effect */
 .filterbubble-theme::before {
     content: '';
     position: fixed;
@@ -50,32 +113,48 @@
 
 /* Digital Detective Theme - Noir grayscale */
 .detective-theme {
-    background: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
-    position: relative;
+    background-image: 
+        linear-gradient(rgba(44, 62, 80, 0.3), rgba(52, 152, 186, 0.3)),  /* Gradient overlay */
+        url('../assets/board.jpeg'); /* Background image path */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    position: relative; /* Necessary for child elements */
+    min-height: 100vh; /* Ensure the container fills the viewport */
 }
 
+/* Add a background effect to the ::before pseudo-element for further enhancement */
 .detective-theme::before {
     content: '';
-    position: fixed;
+    position: absolute; /* Position it absolutely to cover the container */
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: 
-        linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.02) 42%, transparent 44%),
-        linear-gradient(-45deg, transparent 40%, rgba(255,255,255,0.02) 42%, transparent 44%);
-    pointer-events: none;
+        linear-gradient(45deg, transparent 40%, rgba(255, 255, 255, 0.02) 42%, transparent 44%),
+        linear-gradient(-45deg, transparent 40%, rgba(255, 255, 255, 0.02) 42%, transparent 44%);
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: -1; /* Ensure it stays behind the content */
 }
+
 
 /* Echo Chamber Theme - Tense techno */
 .echochamber-theme {
-    background: linear-gradient(135deg, #ee5a6f 0%, #f29263 50%, #ee5a6f 100%);
-    position: relative;
+    background-image: 
+        linear-gradient(rgba(238, 90, 111, 0.3), rgba(242, 146, 99, 0.3)), /* Gradient overlay */
+        url('../assets/ec.jpeg'); /* Background image */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    position: relative; /* Necessary for child elements */
+    min-height: 100vh; /* Ensure the container fills the viewport */
 }
 
+/* Add a background effect to the ::before pseudo-element for further enhancement */
 .echochamber-theme::before {
     content: '';
-    position: fixed;
+    position: absolute; /* Position it absolutely to cover the container */
     top: 0;
     left: 0;
     right: 0;
@@ -85,10 +164,12 @@
             90deg,
             transparent,
             transparent 98px,
-            rgba(0,0,0,0.03) 100px
-        );
-    pointer-events: none;
+            rgba(0, 0, 0, 0.03) 100px
+        ); /* Repeating pattern effect */
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: -1; /* Ensure it stays behind the content */
 }
+
 
 /* Game Content Areas */
 .game-content {

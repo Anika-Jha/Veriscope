@@ -16,11 +16,11 @@
                 <i class="fas fa-search-plus logo-icon"></i>
                 <h1 class="logo-title">VERISCOPE</h1>
                 <h2 class="logo-title">SCOPE OF TRUTH</h2>
-                <p class="logo-subtitle">Master Media Literacy Through Interactive Games</p>
+                <p class="logo-subtitle">Master Media Information Literacy Through Interactive Games</p>
             </div>
             <button id="start-button" class="start-btn">
                 <i class="fas fa-play"></i>
-                Start Veriscope
+                START
             </button>
             <div class="landing-features">
                 <div class="feature">
@@ -43,7 +43,7 @@
     <div id="game-hub" class="screen">
         <div class="hub-container">
             <div class="hub-header">
-                <h2><i class="fas fa-gamepad"></i> Choose Your Challenge</h2>
+                <h2><i class="fas fa-gamepad"></i> CHOOSE YOUR CHALLENGE</h2>
                 <div class="progress-display">
                     <span id="games-completed">0</span>/4 Games Completed
                     <div class="progress-bar">
@@ -124,19 +124,30 @@
         </div>
     </div>
 
-    <div id="filterbubble-game" class="screen game-screen filterbubble-theme">
-        <div class="game-container">
-            <div class="game-header">
-                <button class="back-btn" data-target="game-hub"><i class="fas fa-arrow-left"></i></button>
-                <h2><i class="fas fa-bubble"></i> Filter Bubble Simulator</h2>
-                <div class="audio-controls">
-                    <button id="filterbubble-music-toggle" class="audio-toggle"><i class="fas fa-music"></i></button>
-                    <button id="filterbubble-sfx-toggle" class="audio-toggle"><i class="fas fa-volume-up"></i></button>
-                </div>
+    <!-- Filter Bubble Game Screen -->
+<div id="filterbubble-game" class="screen game-screen filterbubble-theme">
+    <div class="game-container">
+        <div class="game-header">
+            <button class="back-btn" data-target="game-hub"><i class="fas fa-arrow-left"></i></button>
+            <h2><i class="fas fa-bubble"></i> Filter Bubble Simulator</h2>
+            <div class="audio-controls">
+                <button id="filterbubble-music-toggle" class="audio-toggle"><i class="fas fa-music"></i></button>
+                <button id="filterbubble-sfx-toggle" class="audio-toggle"><i class="fas fa-volume-up"></i></button>
             </div>
-            <div id="filterbubble-content" class="game-content"></div>
         </div>
+
+        <!-- Add the Floating Bubbles Here -->
+        <div class="filterbubble-theme">
+            <div class="floating-bubble" id="bubble1"></div>
+            <div class="floating-bubble" id="bubble2"></div>
+            <div class="floating-bubble" id="bubble3"></div>
+            <div class="floating-bubble" id="bubble4"></div>
+        </div>
+
+        <div id="filterbubble-content" class="game-content"></div>
     </div>
+</div>
+
 
     <div id="digitaldetective-game" class="screen game-screen detective-theme">
         <div class="game-container">

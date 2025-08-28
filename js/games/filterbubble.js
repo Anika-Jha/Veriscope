@@ -138,7 +138,7 @@ if (typeof AIIntegration === "undefined") {
       floatingBubble.textContent = infoBubble.text;
       floatingBubble.style.display = "block";
       floatingBubble.style.left = "-250px";
-      floatingBubble.style.transition = "left 200s linear";
+      floatingBubble.style.transition = "left 500s linear";
           
       setTimeout(() => { floatingBubble.style.left = "calc(50% - 100px)"; }, 100);
       setTimeout(() => { actions.style.display = "block"; }, 3200);
