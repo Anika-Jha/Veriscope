@@ -3,159 +3,209 @@
 
 const FALLBACK_STORIES = {
     
-        "rumorville": [
-          {
-            "text": "BREAKING: Aliens spotted landing in Town Square at midnight!",
-            "isTrue": false,
-            "explanation": "Sensational claim with no credible sources. MIL: check author, look for evidence and verify via reliable outlets."
-          },
-          {
-            "text": "Mayor announces free health clinic opening next month.",
-            "isTrue": true,
-            "explanation": "Supported by local government channels. MIL: verify via official site or press release."
-          },
-          {
-            "text": "Scientists discover chocolate can cure all diseases! Eat 10 bars daily!",
-            "isTrue": false,
-            "explanation": "Misinformation with exaggerated promises. MIL: consult health professionals and peer-reviewed research."
-          },
-          {
-            "text": "Local elementary school announces annual science fair next Friday.",
-            "isTrue": true,
-            "explanation": "Likely school communication. MIL: confirm via school newsletter or website."
-          },
-          {
-            "text": "GOVERNMENT COVER-UP: Secret documents reveal dragon sightings!",
-            "isTrue": false,
-            "explanation": "A myth-based conspiracy with no evidence. MIL: demand credible documentation."
-          },
-          {
-            "text": "Weekly farmers' market resumes this Sunday featuring local crafts.",
-            "isTrue": true,
-            "explanation": "Typical community event. MIL: verify through community notices or organizers."
-          },
-          {
-            "text": "URGENT: Click this link for miracle diet that melts fat overnight!",
-            "isTrue": false,
-            "explanation": "Clickbait scam. MIL: watch for urgency and unrealistic promises; consult trusted health sources."
-          },
-          {
-            "text": "Town library adds 500 new books to children’s section.",
-            "isTrue": true,
-            "explanation": "Institutional update. MIL: check library website or contact them directly."
-          },
-          {
-            "text": "WARNING: New virus spreads just through Wi‑Fi signals!",
-            "isTrue": false,
-            "explanation": "Technologically implausible. MIL: verify with cybersecurity experts."
-          },
-          {
-            "text": "High school robotics team wins regionals, advancing to state.",
-            "isTrue": true,
-            "explanation": "School achievement. MIL: verify via school or local news."
-          },
-          {
-            "text": "BREAKING: Scientists confirm unicorns are real!",
-            "isTrue": false,
-            "explanation": "Mythical claim. MIL: requires extraordinary evidence."
-          },
-          {
-            "text": "City council approves affordable housing project—200 units.",
-            "isTrue": true,
-            "explanation": "Local government announcement. MIL: verify through council records."
-          },
-          {
-            "text": "Wearing socks while sleeping increases brain power by 200%!",
-            "isTrue": false,
-            "explanation": "Exaggerated health claim. MIL: verify through scientific sources."
-          },
-          {
-            "text": "Annual music festival in Central Park this weekend.",
-            "isTrue": true,
-            "explanation": "Event announcement. MIL: check official event site or local coverage."
-          },
-          {
-            "text": "Secret moon base hidden for decades, built by aliens!",
-            "isTrue": false,
-            "explanation": "Conspiracy theory without evidence. MIL: check space agency releases."
-          },
-          {
-            "text": "Eco‑friendly buses introduced next week.",
-            "isTrue": true,
-            "explanation": "Public transit initiative. MIL: verify via transit authority."
-          },
-          {
-            "text": "‘Miracle’ sleep supplement guarantees 8 hours in 30 minutes.",
-            "isTrue": false,
-            "explanation": "Unrealistic health claim. MIL: check with medical experts."
-          },
-          {
-            "text": "Library launches free digital e-books platform for cardholders.",
-            "isTrue": true,
-            "explanation": "Library service. MIL: verify via institutional announcement."
-          },
-          {
-            "text": "Secret society of super‑intelligent cats controls the internet.",
-            "isTrue": false,
-            "explanation": "Satirical or fictional. MIL: check context and source intent."
-          },
-          {
-            "text": "Local high school mural project invites student designs.",
-            "isTrue": true,
-            "explanation": "Community art project. MIL: validate with school or organizers."
-          },
-          {
-            "text": "Local bakery giving free bread today!",
-            "isTrue": "True or False—verify.",
-            "explanation": "Possibly promotional. MIL: check bakery social media or ask directly."
-          },
-          {
-            "text": "Meteor shower tonight visible to naked eye.",
-            "isTrue": true,
-            "explanation": "Astronomical event. MIL: check weather and astronomy sources."
-          },
-          {
-            "text": "New virus spreading online via smartphones.",
-            "isTrue": false,
-            "explanation": "Scaremongering. MIL: consult tech/security resources."
-          },
-          {
-            "text": "City hosting dog parade this Saturday.",
-            "isTrue": true,
-            "explanation": "Civic event. MIL: verify via city events calendar."
-          },
-          {
-            "text": "Celebrity endorses risky weight loss pill.",
-            "isTrue": false,
-            "explanation": "Marketing with health risk. MIL: check medical authority guidance."
-          },
-          {
-            "text": "Community center hosting free yoga classes.",
-            "isTrue": true,
-            "explanation": "Promotional community offering. MIL: confirm with center’s postings."
-          },
-          {
-            "text": "Instant translation app enabling telepathy released.",
-            "isTrue": false,
-            "explanation": "Sci‑fi claim. MIL: evaluate feasibility and developer credentials."
-          },
-          {
-            "text": "Local artist featured in national gallery.",
-            "isTrue": true,
-            "explanation": "Cultural news. MIL: verify with gallery or artist statement."
-          },
-          {
-            "text": "Mystery illness in town linked to water supply.",
-            "isTrue": "True or False—verify.",
-            "explanation": "Serious public health claim. MIL: check health department."
-          },
-          {
-            "text": "City planting 100 new trees next month.",
-            "isTrue": true,
-            "explanation": "Environmental project. MIL: confirm via municipal plans."
-          }
-        ],
+  "rumorville": [
+    {
+      "text": "A new study shows that drinking coffee reduces risk of heart attacks by 70%.",
+      "isTrue": false,
+      "explanation": "The percentage is exaggerated. Real studies show mixed results with far smaller effects. MIL: always check sample size and publication."
+    },
+    {
+      "text": "The city council has approved funding to renovate all public parks within the next year.",
+      "isTrue": true,
+      "explanation": "Local news confirmed through government press release. MIL: cross-check official announcements."
+    },
+    {
+      "text": "A local influencer claims that rubbing lemon on your skin prevents COVID-19 infection.",
+      "isTrue": false,
+      "explanation": "Health misinformation. MIL: verify with WHO or trusted health sources."
+    },
+    {
+      "text": "The regional transit authority will increase fares by 10% starting in October.",
+      "isTrue": true,
+      "explanation": "Covered by multiple newspapers and official transit board statement."
+    },
+    {
+      "text": "Viral post claims vaccines contain microchips for government surveillance.",
+      "isTrue": false,
+      "explanation": "Classic conspiracy theory debunked by independent fact-checkers."
+    },
+    {
+      "text": "The local hospital is opening a new mental health wing for teenagers.",
+      "isTrue": true,
+      "explanation": "Community health initiative verified by hospital's official website."
+    },
+    {
+      "text": "Drinking a glass of red wine daily cures diabetes, according to Facebook posts.",
+      "isTrue": false,
+      "explanation": "False medical claim with no credible backing. MIL: consult peer-reviewed studies and doctors."
+    },
+    {
+      "text": "The new public library will feature free coding classes for students this summer.",
+      "isTrue": true,
+      "explanation": "Educational program announced by library’s press office."
+    },
+    {
+      "text": "Breaking: Photos circulating show a celebrity shopping in your town yesterday.",
+      "isTrue": false,
+      "explanation": "Often clickbait. MIL: verify images via reverse search."
+    },
+    {
+      "text": "Local university researchers are working on drought-resistant crops for farmers.",
+      "isTrue": true,
+      "explanation": "Reported in academic press and university media."
+    },
+    {
+      "text": "WhatsApp forward claims cooking rice in an iron pot boosts your IQ permanently.",
+      "isTrue": false,
+      "explanation": "Pseudoscience. MIL: watch for extraordinary claims without studies."
+    },
+    {
+      "text": "Municipal authorities have banned single-use plastics starting January next year.",
+      "isTrue": true,
+      "explanation": "Policy change documented in official circulars and local TV reports."
+    },
+    {
+      "text": "Instagram post claims climate change is a hoax created by scientists for funding.",
+      "isTrue": false,
+      "explanation": "Disinformation tactic, widely debunked by UN and IPCC."
+    },
+    {
+      "text": "The local museum will host an exhibition on ancient trade routes next month.",
+      "isTrue": true,
+      "explanation": "Confirmed by museum schedule and event page."
+    },
+    {
+      "text": "Forwarded message: Boiling garlic water cures cancer in three weeks.",
+      "isTrue": false,
+      "explanation": "Dangerous health misinformation. MIL: cross-check with credible medical organizations."
+    },
+    {
+      "text": "The national exam schedule has been postponed due to extreme weather warnings.",
+      "isTrue": true,
+      "explanation": "Education board confirmed on their verified social media."
+    },
+    {
+      "text": "A viral tweet says a supermarket is secretly adding addictive chemicals to bread.",
+      "isTrue": false,
+      "explanation": "Fearmongering rumor. MIL: demand evidence, verify with regulators."
+    },
+    {
+      "text": "Local high school team wins state-level robotics competition.",
+      "isTrue": true,
+      "explanation": "Reported by school, local press, and event organizers."
+    },
+    {
+      "text": "A chain message says mobile phones cause instant brain tumors if kept near the pillow.",
+      "isTrue": false,
+      "explanation": "Fear-based misinformation without scientific evidence."
+    },
+    {
+      "text": "City announces free public Wi-Fi zones in downtown area starting this winter.",
+      "isTrue": true,
+      "explanation": "Official initiative confirmed in municipal press release."
+    }
+  ],
         "filterbubble": [
+          {
+            "text": "Local hospital reports shortage of nurses due to burnout",
+            "sentiment": "Negative",
+            "explanation": "MIL: confirm with healthcare workforce reports."
+          },
+          {
+            "text": "New library program offers free coding classes for teenagers",
+            "sentiment": "Positive",
+            "explanation": "MIL: check program details and inclusivity."
+          },
+          {
+            "text": "Wildfires destroy homes in multiple rural communities",
+            "sentiment": "Negative",
+            "explanation": "MIL: verify emergency updates from local authorities."
+          },
+          {
+            "text": "University researchers discover potential treatment for rare disease",
+            "sentiment": "Positive",
+            "explanation": "MIL: evaluate peer-review status and replication."
+          },
+          {
+            "text": "Public trust in local government declines after corruption scandal",
+            "sentiment": "Negative",
+            "explanation": "MIL: distinguish fact from rumor in political reporting."
+          },
+          {
+            "text": "Neighborhood recycling program reduces landfill waste by 30%",
+            "sentiment": "Positive",
+            "explanation": "MIL: assess independent environmental studies."
+          },
+          {
+            "text": "Protests erupt after proposed increase in tuition fees",
+            "sentiment": "Negative",
+            "explanation": "MIL: cross-check perspectives from students, faculty, and government."
+          },
+          {
+            "text": "Women-led cooperative expands organic food distribution",
+            "sentiment": "Positive",
+            "explanation": "MIL: validate claims of economic empowerment."
+          },
+          {
+            "text": "Housing shortage forces families into temporary shelters",
+            "sentiment": "Negative",
+            "explanation": "MIL: analyze housing policy and regional data."
+          },
+          {
+            "text": "Community theater stages play about climate resilience",
+            "sentiment": "Positive",
+            "explanation": "MIL: reflect on culture’s role in awareness."
+          },
+          {
+            "text": "Police face criticism for excessive use of surveillance technology",
+            "sentiment": "Negative",
+            "explanation": "MIL: assess privacy and civil rights implications."
+          },
+          {
+            "text": "Small businesses recover faster than expected after pandemic",
+            "sentiment": "Positive",
+            "explanation": "MIL: examine financial data trends."
+          },
+          {
+            "text": "Local sports team accused of mismanaging public funding",
+            "sentiment": "Negative",
+            "explanation": "MIL: separate investigative reporting from speculation."
+          },
+          {
+            "text": "High school integrates media literacy into curriculum",
+            "sentiment": "Positive",
+            "explanation": "MIL: evaluate outcomes for critical thinking."
+          },
+          {
+            "text": "Fake job ads spreading online target unemployed workers",
+            "sentiment": "Negative",
+            "explanation": "MIL: fact-check recruitment sources carefully."
+          },
+          {
+            "text": "Art installation raises awareness about ocean plastic pollution",
+            "sentiment": "Positive",
+            "explanation": "MIL: combine artistic expression with verified science."
+          },
+          {
+            "text": "New housing project criticized for displacing low-income residents",
+            "sentiment": "Negative",
+            "explanation": "MIL: review evidence from community groups."
+          },
+          {
+            "text": "Local radio station wins award for investigative journalism",
+            "sentiment": "Positive",
+            "explanation": "MIL: highlight role of independent media."
+          },
+          {
+            "text": "Cybersecurity breach exposes personal data of thousands",
+            "sentiment": "Negative",
+            "explanation": "MIL: confirm with official disclosures."
+          },
+          {
+            "text": "University launches open course on fact-checking online sources",
+            "sentiment": "Positive",
+            "explanation": "MIL: open access supports global media literacy."
+          },
           {
             "text": "Local farmer markets are struggling and many are closing due to decreased traffic",
             "sentiment": "Negative",
@@ -369,94 +419,104 @@ const FALLBACK_STORIES = {
             "explanation": "Official UN report. MIL: confirm via UN portal."
           },
           {
-            "text": "Unknown whistleblower reveals alien DNA research.",
+            "text": "Breaking: Local council secretly sells public park to developers!",
             "isCredible": false,
-            "explanation": "Anonymous source, no evidence. MIL: require documentation."
+            "explanation": "Anonymous claim without documentation. MIL: verify through council records."
           },
           {
-            "text": "Academic conference proceedings published online.",
+            "text": "Ministry of Education publishes annual literacy statistics.",
             "isCredible": true,
-            "explanation": "Academic output. MIL: check conference legitimacy."
+            "explanation": "Official government data. MIL: cross-check on ministry portal."
           },
           {
-            "text": "Chain text warns of national crisis tomorrow.",
+            "text": "Facebook post claims 5G towers cause severe illness.",
             "isCredible": false,
-            "explanation": "Likely false alarm. MIL: consult reliable media."
+            "explanation": "Conspiracy theory, no scientific support. MIL: consult WHO reports."
           },
           {
-            "text": "Peer-reviewed study shows daily walking benefits brain health.",
+            "text": "National Science Academy announces grant funding for renewable energy research.",
             "isCredible": true,
-            "explanation": "Supported by research. MIL: read methodology."
+            "explanation": "Institutional release. MIL: confirm via academy website."
           },
           {
-            "text": "Anonymous post claims government cloning program.",
+            "text": "Unknown blog alleges that elections are pre-programmed.",
             "isCredible": false,
-            "explanation": "Conspiracy, no data. MIL: cross-check credible science sources."
+            "explanation": "Unsupported allegation. MIL: compare with independent observers."
           },
           {
-            "text": "University library announces open archive access.",
+            "text": "Peer-reviewed journal publishes new vaccine safety trial data.",
             "isCredible": true,
-            "explanation": "Institutional release. MIL: verify via library website."
+            "explanation": "Academic peer review ensures reliability. MIL: assess journal quality."
           },
           {
-            "text": "Fake tax notice email—click to reactivate account.",
+            "text": "Viral video claims lemon water cures cancer.",
             "isCredible": false,
-            "explanation": "Phishing attempt. MIL: contact official institution."
+            "explanation": "Unverified medical claim. MIL: consult oncology experts."
           },
           {
-            "text": "International health agency issues diet safety warning.",
+            "text": "Weather bureau issues early storm warning for coastal areas.",
             "isCredible": true,
-            "explanation": "Trusted authority. MIL: check health agency."
+            "explanation": "Official meteorological service. MIL: confirm with regional alerts."
           },
           {
-            "text": "Celebrity tweets new discovery bypassing peer review.",
+            "text": "Chain message warns of food shortages next week.",
             "isCredible": false,
-            "explanation": "Identifiable but unverified. MIL: check for peer-reviewed coverage."
+            "explanation": "Fear-inducing rumor. MIL: verify with supply chain reports."
           },
           {
-            "text": "Scientific journal critique on GMO effects released.",
+            "text": "University press release highlights breakthroughs in solar panel efficiency.",
             "isCredible": true,
-            "explanation": "Peer-reviewed critique. MIL: assess author and journal."
+            "explanation": "Institutional announcement. MIL: check publication date and authorship."
           },
           {
-            "text": "YouTube influencer says secret diet melts fat fast.",
+            "text": "Click here to win a free iPhone! Limited spots!",
             "isCredible": false,
-            "explanation": "Unverified health advice. MIL: check accredited medical sources."
+            "explanation": "Classic phishing tactic. MIL: avoid suspicious links."
           },
           {
-            "text": "Government portal publishes educational data stats.",
+            "text": "Health ministry publishes guidelines for safe drinking water.",
             "isCredible": true,
-            "explanation": "Official data. MIL: verify via portal."
+            "explanation": "Credible authority. MIL: confirm with official portal."
           },
           {
-            "text": "Bogus email claims bank account closure.",
+            "text": "Influencer warns that microwaves alter DNA permanently.",
             "isCredible": false,
-            "explanation": "Scam. MIL: contact bank directly."
+            "explanation": "Pseudoscience. MIL: verify with peer-reviewed health studies."
           },
           {
-            "text": "Research institute reports solar energy uptake findings.",
+            "text": "UNESCO launches new initiative to promote media literacy worldwide.",
             "isCredible": true,
-            "explanation": "Institutional publication. MIL: evaluate research context."
+            "explanation": "Official organizational release. MIL: confirm on UNESCO’s website."
           },
           {
-            "text": "Anonymous chain message predicts tomorrow’s disaster.",
+            "text": "Anonymous Twitter account reveals 'classified UFO documents'.",
             "isCredible": false,
-            "explanation": "Panic-inducing rumor. MIL: cross-check."
+            "explanation": "Anonymous, no verification. MIL: check for credible sources."
           },
           {
-            "text": "Peer-reviewed tech study on AI trends published.",
+            "text": "Research institute publishes findings on rising sea levels.",
             "isCredible": true,
-            "explanation": "Academic source. MIL: review publication standards."
+            "explanation": "Scientific data. MIL: examine methodology."
           },
           {
-            "text": "Local health blog claims unique recovery case.",
+            "text": "Celebrity chef claims certain foods boost immunity instantly.",
             "isCredible": false,
-            "explanation": "Anecdotal. MIL: consult medical consensus."
+            "explanation": "Health exaggeration. MIL: confirm via scientific consensus."
           },
           {
-            "text": "Scientific team shares DNA sequencing results.",
+            "text": "World Bank releases annual poverty reduction report.",
             "isCredible": true,
-            "explanation": "Scientific disclosure. MIL: verify institutional affiliation."
+            "explanation": "Respected institution. MIL: access original report."
+          },
+          {
+            "text": "Blog post alleges hidden chemicals in tap water causing mass illness.",
+            "isCredible": false,
+            "explanation": "Fear-based misinformation. MIL: cross-check with health authority."
+          },
+          {
+            "text": "Peer-reviewed article finds connection between exercise and mental health improvement.",
+            "isCredible": true,
+            "explanation": "Academic research. MIL: evaluate sample size and replication."
           }
         ],
         "echochamber": [
@@ -521,94 +581,154 @@ const FALLBACK_STORIES = {
             "explanation": "Empathetic and inclusive framing."
           },
           {
-            "text": "All dissenters are spreading lies intentionally.",
+            "text": "If you’re not with us, you’re against us.",
             "biasLevel": "biased",
-            "biasType": "dismissiveness",
-            "explanation": "Discourages conversation. MIL: question intent claims."
+            "biasType": "false dichotomy",
+            "explanation": "Forces oversimplified choices. MIL: teach nuance in perspectives."
           },
           {
-            "text": "We might update positions with new data.",
+            "text": "Different communities can experience this issue in unique ways.",
             "biasLevel": "balanced",
-            "biasType": "open-minded",
-            "explanation": "Promotes intellectual flexibility."
+            "biasType": "contextual awareness",
+            "explanation": "Recognizes diversity of experience."
           },
           {
-            "text": "Their group spreads misinformation deliberately.",
+            "text": "Only idiots trust mainstream institutions anymore.",
             "biasLevel": "biased",
-            "biasType": "accusatory",
-            "explanation": "Lacks neutral examination. MIL: demand evidence."
+            "biasType": "anti-institutional",
+            "explanation": "Discredits institutions without evidence. MIL: seek accountability, not dismissal."
           },
           {
-            "text": "Open debate is our path to truth.",
+            "text": "This topic is complicated; let’s compare multiple sources.",
             "biasLevel": "balanced",
-            "biasType": "dialogue",
-            "explanation": "Supports democratic engagement."
+            "biasType": "source diversity",
+            "explanation": "Encourages triangulation of information."
           },
           {
-            "text": "Only our sources are credible.",
+            "text": "Our political party is the only one that cares about the people.",
             "biasLevel": "biased",
-            "biasType": "source bias",
-            "explanation": "Encourages narrow thinking. MIL: diversify sources."
+            "biasType": "partisan bias",
+            "explanation": "Overgeneralizes political motives. MIL: compare policy records."
           },
           {
-            "text": "Multiple credible sources support the claim.",
+            "text": "Experts disagree; let’s look at where consensus exists.",
             "biasLevel": "balanced",
-            "biasType": "verification",
-            "explanation": "Promotes triangulation."
+            "biasType": "consensus-seeking",
+            "explanation": "Builds on expert discourse responsibly."
           },
           {
-            "text": "Our community is intellectually superior.",
+            "text": "People on the other side are all corrupt liars.",
             "biasLevel": "biased",
-            "biasType": "intellectual arrogance",
-            "explanation": "Discourages critical humility."
+            "biasType": "generalization",
+            "explanation": "Sweeping claim. MIL: challenge stereotypes."
           },
           {
-            "text": "No one can agree yet—we need more research.",
+            "text": "Let’s consider the data before rushing to conclusions.",
             "biasLevel": "balanced",
-            "biasType": "provisional conclusion",
-            "explanation": "Appreciates uncertainty."
+            "biasType": "evidence-first",
+            "explanation": "Promotes rational analysis."
           },
           {
-            "text": "We have facts; they have lies.",
+            "text": "They’re just sheep who can’t think for themselves.",
+            "biasLevel": "biased",
+            "biasType": "dehumanization",
+            "explanation": "Dismisses individuals. MIL: emphasize empathy."
+          },
+          {
+            "text": "This may depend on cultural context—different societies solve it differently.",
+            "biasLevel": "balanced",
+            "biasType": "cultural awareness",
+            "explanation": "Respects global perspectives."
+          },
+          {
+            "text": "Our way is the only solution—everything else is fake news.",
             "biasLevel": "biased",
             "biasType": "dogmatism",
-            "explanation": "Promotes intolerance."
+            "explanation": "Rejects plural viewpoints. MIL: promote open inquiry."
           },
           {
-            "text": "Let’s assess evidence impartially.",
+            "text": "Good arguments exist on both sides; let’s weigh them carefully.",
             "biasLevel": "balanced",
-            "biasType": "critical evaluation",
-            "explanation": "Models fair analysis."
+            "biasType": "fair-mindedness",
+            "explanation": "Supports deliberative thinking."
           },
           {
-            "text": "Our narrative is the only truth.",
+            "text": "They control the media, so you can’t trust anything they say.",
             "biasLevel": "biased",
-            "biasType": "monism",
-            "explanation": "Suppresses diversity."
+            "biasType": "conspiracy",
+            "explanation": "Unfalsifiable accusation. MIL: prioritize verifiable evidence."
           },
           {
-            "text": "Evidence evolves—adapt your view.",
+            "text": "Let’s listen to multiple communities before forming judgments.",
             "biasLevel": "balanced",
-            "biasType": "adaptability",
-            "explanation": "Values learning."
+            "biasType": "inclusive listening",
+            "explanation": "Expands dialogue across groups."
           },
           {
-            "text": "They manipulate for political gain.",
+            "text": "Anyone who disagrees is brainwashed.",
             "biasLevel": "biased",
-            "biasType": "attribution bias",
-            "explanation": "Needs scrutiny."
+            "biasType": "dismissive labeling",
+            "explanation": "Avoids engaging with arguments. MIL: encourage discussion."
           },
           {
-            "text": "Everyone’s voice matters in discussion.",
+            "text": "Science evolves—we should update beliefs as new research emerges.",
             "biasLevel": "balanced",
-            "biasType": "inclusivity",
-            "explanation": "Encourages diverse participation."
+            "biasType": "scientific mindset",
+            "explanation": "Values adaptability."
           },
           {
-            "text": "Question everything—but stay open-minded.",
+            "text": "Opponents are evil and want to destroy society.",
+            "biasLevel": "biased",
+            "biasType": "demonization",
+            "explanation": "Polarizes discourse. MIL: question motives with evidence."
+          },
+          {
+            "text": "Let’s check if independent fact-checkers covered this claim.",
             "biasLevel": "balanced",
-            "biasType": "critical openness",
-            "explanation": "Balances skepticism and curiosity."
+            "biasType": "fact-checking",
+            "explanation": "Promotes verification through trusted intermediaries."
+          },
+          {
+            "text": "Our community knows the truth; outsiders never will.",
+            "biasLevel": "biased",
+            "biasType": "elitism",
+            "explanation": "Creates echo chamber isolation."
+          },
+          {
+            "text": "Evidence can be interpreted differently, but facts remain the same.",
+            "biasLevel": "balanced",
+            "biasType": "distinction between fact/opinion",
+            "explanation": "Models careful reasoning."
+          },
+          {
+            "text": "The other side doesn’t care about people like us.",
+            "biasLevel": "biased",
+            "biasType": "victimhood narrative",
+            "explanation": "Assumes intent. MIL: check policies, not feelings."
+          },
+          {
+            "text": "Multiple solutions might work depending on the situation.",
+            "biasLevel": "balanced",
+            "biasType": "pluralism",
+            "explanation": "Encourages flexible thinking."
+          },
+          {
+            "text": "Only our leaders are trustworthy; everyone else deceives.",
+            "biasLevel": "biased",
+            "biasType": "leader worship",
+            "explanation": "Discourages accountability."
+          },
+          {
+            "text": "Different political ideologies sometimes overlap in goals.",
+            "biasLevel": "balanced",
+            "biasType": "bridge-building",
+            "explanation": "Acknowledges shared values."
+          },
+          {
+            "text": "It’s all propaganda if it doesn’t come from us.",
+            "biasLevel": "biased",
+            "biasType": "propaganda framing",
+            "explanation": "Reduces trust in diverse sources."
           }
         ],
         "recent_unesco_mil_news": [
